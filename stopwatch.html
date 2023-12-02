@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> stopwatch</title>
+</head>
+<body>
+    <h1 id="hour">0</h1>
+    <h1 id="min">0</h1>
+    <h1 id="sec">0</h1>
+</body>
+</html>
+
+<script>
+     
+     const hourEl = document.getElementById("hour")
+     const mintEl = document.getElementById("min")
+     const secondEl = document.getElementById("sec")
+
+      let hour = 0;
+      let min = 0;
+      let sec = 0;
+
+setInterval(function(){
+sec++;
+if(sec === 6){
+    sec =0;
+    min++;
+    if(min === 6){
+        min=0;
+        hour++;
+        hourEl.innerText=hour;
+    }
+    mintEl.innerText=min;
+}
+secondEl.innerText=sec
+},1000)
+
+
+
+</script>
